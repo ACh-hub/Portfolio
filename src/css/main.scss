@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One');
+
+:root {
+--colors-background: #F4EEEE;
+--colors-nav-background: #55746F;
+--colors-nav-shadow: rgba(27,62,60,0.5);
+--colors-nav-text: #F4EEEE;
+
+--font-family-header: 'Fjalla One', sans-serif;
+--font-family-text: 'Cantarell', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--colors-background);
+    font-family: var(--font-family-text);
+}
+
+.main-header {
+    width: 100%;
+    background-color: var(--colors-nav-background);
+    padding: 8px 16px;
+    font-family: var(--font-family-header);
+    box-shadow: 0px 3px 3px var(--colors-nav-shadow);
+
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__logo {
+    color: var(--colors-nav-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: var(--colors-nav-text);
+}
