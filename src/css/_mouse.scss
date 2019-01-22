@@ -1,0 +1,60 @@
+.section-mouse{
+    position: absolute;
+    top: 90%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border-radius: 40%;
+    border: 2px solid;
+    border-color: var(--color-scheme-dark);
+}
+
+.mouse::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-scheme-dark);
+    opacity: 1;
+    animation: mouse 1.5s infinite;
+}
+
+span {
+    position: absolute;
+    top: 150%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.mouse:hover > span {
+    color: var(--color-scheme-light);
+}
+
+.mouse:hover {
+    border-color: var(--color-scheme-light);
+}
+
+.mouse:hover::before{
+    background: var(--color-scheme-accent);
+}
+
+@keyframes mouse {
+    from{
+        opacity: 1;
+        top: 5px;
+    }
+
+    to{
+        opacity: 0;
+        top:30px;
+    }
+}
+

@@ -1,11 +1,13 @@
 .main-header {
     width: 100%;
-    background-color: var(--colors-nav-background);
+    background-color: var(--color-scheme-dark);
     padding: 8px 16px;
     font-family: var(--font-family-header);
-    box-shadow: 0px 3px 3px var(--colors-nav-shadow);
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-scheme-main);
+    border-top: 1px solid;
+    border-top-color: var(--color-scheme-light);
     z-index: 2;
-
 }
 
 .main-header > div {
@@ -14,7 +16,7 @@
 }
 
 .main-header__logo {
-    color: var(--colors-nav-text);
+    color: var(--color-scheme-main);
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
@@ -23,6 +25,7 @@
 .main-nav {
     display: inline-block;
     text-align: right;
+    text-transform: uppercase;
     width: calc(100% - 74px);
     vertical-align: middle;
 }
@@ -40,11 +43,14 @@
 
 .main-nav__item a {
     text-decoration: none;
-    color: var(--colors-nav-text);
+    color: var(--color-scheme-main);
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+    border-top: none;
+
   }
+

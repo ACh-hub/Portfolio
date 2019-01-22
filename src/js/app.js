@@ -1,12 +1,18 @@
-window.onscroll = function() {toggleSticky()};
-
 const navbar = document.querySelector(".main-header");
 const sticky = navbar.offsetTop;
 
+window.onscroll = function() {
+    toggleSticky();
+
+};
+
 function toggleSticky() {
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
+        navbar.classList.add("sticky");
+    } 
+    else 
+    {
         navbar.classList.remove("sticky");
     }
 }
+

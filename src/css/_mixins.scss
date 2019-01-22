@@ -1,0 +1,8 @@
+@import 'variables';
+
+@mixin section-styling(){
+    width: 100%;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}

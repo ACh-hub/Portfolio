@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One');
 
 :root {
---colors-background: #F4EEEE;
---colors-nav-background: #55746F;
---colors-nav-shadow: rgba(27,62,60,0.5);
---colors-nav-text: #F4EEEE;
+
+--color-scheme-main: #00ADB5;
+--color-scheme-accent: #F8B500;
+--color-scheme-dark: #393E46;
+--color-scheme-light: #B7C7E0;
+--color-scheme-bg: #ECE8D9;
 
 --font-family-header: 'Fjalla One', sans-serif;
 --font-family-text: 'Cantarell', sans-serif;
