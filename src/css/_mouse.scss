@@ -27,17 +27,6 @@
     animation: mouse 1.5s infinite;
 }
 
-span {
-    position: absolute;
-    top: 150%;
-    left:50%;
-    transform: translate(-50%, -50%);
-}
-
-.mouse:hover > span {
-    color: var(--color-scheme-light);
-}
-
 .mouse:hover {
     border-color: var(--color-scheme-light);
 }

@@ -3,6 +3,7 @@
     background-color: var(--color-scheme-dark);
     padding: 8px 16px;
     font-family: var(--font-family-header);
+    overflow: hidden;
     border-bottom: 1px solid;
     border-bottom-color: var(--color-scheme-main);
     border-top: 1px solid;
@@ -52,5 +53,9 @@
     width: 100%;
     border-top: none;
 
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
   }
 
