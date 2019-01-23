@@ -15,31 +15,36 @@ body {
     color: var(--color-scheme-dark);
 }
    
-.section-hero{
+#section-hero{
     @include section-styling();
     height: 100vh;
     background-color: var(--color-scheme-main);
 }
-.section-about{
+
+#section-about{
     @include section-styling();
     height: 100vh;
     background-color: var(--color-scheme-light);
 }
-.section-portfolio{
+#section-portfolio{
     @include section-styling();
     height: 100vh;
     background-color: var(--color-scheme-bg);
 }
 
-.section-contact{
+#section-contact{
     @include section-styling();
     height: 50vh;
     background-color: var(--color-scheme-main);
 }
 
-    .content {
-        padding: 16px;
-      }
+.content {
+    padding: 16px;
+}
+
+.active {
+    color: var(--color-scheme-accent) !important;
+}
 
 h1{
     font-family: var(--font-family-header);

@@ -22,7 +22,7 @@
 
 .section-mouse {
   position: absolute;
-  top: 90%;
+  top: 93%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -52,12 +52,26 @@
           animation: mouse 1.5s infinite;
 }
 
+.mouse span {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .mouse:hover {
   border-color: var(--color-scheme-light);
 }
 
 .mouse:hover::before {
   background: var(--color-scheme-accent);
+}
+
+.mouse:hover > span {
+  color: var(--color-scheme-light);
+  -webkit-animation: scroll 1.5s;
+          animation: scroll 1.5s;
 }
 
 @-webkit-keyframes mouse {
@@ -79,6 +93,24 @@
   to {
     opacity: 0;
     top: 30px;
+  }
+}
+
+@-webkit-keyframes scroll {
+  from {
+    color: var(--color-scheme-accent);
+  }
+  to {
+    color: var(--color-scheme-light);
+  }
+}
+
+@keyframes scroll {
+  from {
+    color: var(--color-scheme-accent);
+  }
+  to {
+    color: var(--color-scheme-light);
   }
 }
 
@@ -155,7 +187,7 @@ body {
   color: var(--color-scheme-dark);
 }
 
-.section-hero {
+#section-hero {
   width: 100%;
   background-size: cover;
   display: table;
@@ -164,7 +196,7 @@ body {
   background-color: var(--color-scheme-main);
 }
 
-.section-about {
+#section-about {
   width: 100%;
   background-size: cover;
   display: table;
@@ -173,7 +205,7 @@ body {
   background-color: var(--color-scheme-light);
 }
 
-.section-portfolio {
+#section-portfolio {
   width: 100%;
   background-size: cover;
   display: table;
@@ -182,7 +214,7 @@ body {
   background-color: var(--color-scheme-bg);
 }
 
-.section-contact {
+#section-contact {
   width: 100%;
   background-size: cover;
   display: table;
@@ -193,6 +225,10 @@ body {
 
 .content {
   padding: 16px;
+}
+
+.active {
+  color: var(--color-scheme-accent) !important;
 }
 
 h1 {

@@ -1,6 +1,6 @@
 .section-mouse{
     position: absolute;
-    top: 90%;
+    top: 93%;
     left:50%;
     transform: translate(-50%, -50%);
 }
@@ -27,6 +27,13 @@
     animation: mouse 1.5s infinite;
 }
 
+.mouse span {
+    position: absolute;
+    top: 140%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
 .mouse:hover {
     border-color: var(--color-scheme-light);
 }
@@ -35,15 +42,27 @@
     background: var(--color-scheme-accent);
 }
 
+.mouse:hover > span {
+    color: var(--color-scheme-light);
+    animation: scroll 1.5s;
+}
+
 @keyframes mouse {
     from{
         opacity: 1;
         top: 5px;
     }
-
     to{
         opacity: 0;
         top:30px;
     }
 }
 
+@keyframes scroll {
+    from{
+        color: var(--color-scheme-accent);
+    }
+    to{
+        color: var(--color-scheme-light);
+    }
+}
