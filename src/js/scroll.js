@@ -1,3 +1,5 @@
+"use strict";
+
 const navbar = document.querySelector(".main-header");
 const sticky = navbar.offsetTop;
 const spaiedDivs = Array.from(document.querySelectorAll(".content"));
@@ -27,8 +29,7 @@ window.onload= function () {
 window.onscroll = function () {
     toggleSticky();
     spaiedDivs.forEach(spaiedDiv=>{
-        let spaiedLink = document.querySelector(`a[href*=${spaiedDiv.id}]`)
-        
+        let spaiedLink = document.querySelector(`a[href*=${spaiedDiv.id}]`);
         if(checkVisible(spaiedDiv))
         {
             spaiedLink.classList.add("active");

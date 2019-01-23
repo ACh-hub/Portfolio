@@ -42,11 +42,9 @@ body {
     height: 50vh;
     background-color: var(--color-scheme-main);
 }
-
-.content {
-    padding: 16px;
+.content .wrapper {
+    display: flex;
 }
-
 .active {
     color: var(--color-scheme-accent) !important;
 }

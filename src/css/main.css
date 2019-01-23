@@ -31,16 +31,16 @@
 
 .section-mouse {
   position: absolute;
-  top: 93%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  top: 93%;
 }
 
 .mouse {
   width: 20px;
   height: 35px;
-  border-radius: 40%;
+  border-radius: 10px;
   border: 2px solid;
   border-color: var(--color-scheme-dark);
 }
@@ -63,10 +63,11 @@
 
 .mouse span {
   position: absolute;
-  top: 140%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  top: 140%;
+  text-transform: uppercase;
 }
 
 .mouse:hover {
@@ -206,16 +207,22 @@
 }
 
 .button {
-  height: 20px;
-  width: 40px;
+  height: 45px;
+  width: 120px;
   background-color: var(--color-scheme-accent);
   color: var(--color-scheme-dark);
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
   -webkit-box-shadow: 0 1px 1px 1px inset var(--color-shadow-bg), 0 1px 1px 1px var(--color-shadow-dark);
           box-shadow: 0 1px 1px 1px inset var(--color-shadow-bg), 0 1px 1px 1px var(--color-shadow-dark);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
 }
 
 * {
@@ -271,8 +278,10 @@ body {
   background-color: var(--color-scheme-main);
 }
 
-.content {
-  padding: 16px;
+.content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .active {
