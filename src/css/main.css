@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One");
 @import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One");
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One");
 :root {
   --color-scheme-main: #00ADB5;
   --color-scheme-accent: #F8B500;
   --color-scheme-dark: #393E46;
   --color-scheme-light: #B7C7E0;
   --color-scheme-bg: #ECE8D9;
+  --color-shadow-dark: rgba(57, 62, 70, 0.3);
+  --color-shadow-light: rgba(183, 199, 224, 0.3);
+  --color-shadow-bg: rgba(236, 232, 217, 0.3);
+  --color-shadow-main: rgba(0, 173, 181, 0.3);
   --font-family-header: 'Fjalla One', sans-serif;
   --font-family-text: 'Cantarell', sans-serif;
 }
@@ -16,6 +21,10 @@
   --color-scheme-dark: #393E46;
   --color-scheme-light: #B7C7E0;
   --color-scheme-bg: #ECE8D9;
+  --color-shadow-dark: rgba(57, 62, 70, 0.3);
+  --color-shadow-light: rgba(183, 199, 224, 0.3);
+  --color-shadow-bg: rgba(236, 232, 217, 0.3);
+  --color-shadow-main: rgba(0, 173, 181, 0.3);
   --font-family-header: 'Fjalla One', sans-serif;
   --font-family-text: 'Cantarell', sans-serif;
 }
@@ -121,9 +130,9 @@
   font-family: var(--font-family-header);
   overflow: hidden;
   border-bottom: 1px solid;
-  border-bottom-color: var(--color-scheme-main);
+  border-bottom-color: var(--color-shadow-main);
   border-top: 1px solid;
-  border-top-color: var(--color-scheme-light);
+  border-top-color: var(--color-shadow-light);
   z-index: 2;
 }
 
@@ -163,6 +172,14 @@
   color: var(--color-scheme-main);
 }
 
+.main-nav__item a:hover {
+  color: var(--color-scheme-light);
+}
+
+.main-nav__item a:active {
+  color: var(--color-scheme-accent);
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -172,6 +189,33 @@
 
 .sticky + .content {
   padding-top: 60px;
+}
+
+:root {
+  --color-scheme-main: #00ADB5;
+  --color-scheme-accent: #F8B500;
+  --color-scheme-dark: #393E46;
+  --color-scheme-light: #B7C7E0;
+  --color-scheme-bg: #ECE8D9;
+  --color-shadow-dark: rgba(57, 62, 70, 0.3);
+  --color-shadow-light: rgba(183, 199, 224, 0.3);
+  --color-shadow-bg: rgba(236, 232, 217, 0.3);
+  --color-shadow-main: rgba(0, 173, 181, 0.3);
+  --font-family-header: 'Fjalla One', sans-serif;
+  --font-family-text: 'Cantarell', sans-serif;
+}
+
+.button {
+  height: 20px;
+  width: 40px;
+  background-color: var(--color-scheme-accent);
+  color: var(--color-scheme-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 1px 1px inset var(--color-shadow-bg), 0 1px 1px 1px var(--color-shadow-dark);
+          box-shadow: 0 1px 1px 1px inset var(--color-shadow-bg), 0 1px 1px 1px var(--color-shadow-dark);
 }
 
 * {

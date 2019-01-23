@@ -1,0 +1,13 @@
+@import 'variables';
+
+.button {
+    height: 20px;
+    width: 40px;
+    background-color: var(--color-scheme-accent);
+    color: var(--color-scheme-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius:10px;
+    box-shadow: 0 1px 1px 1px inset var(--color-shadow-bg), 0 1px 1px 1px var(--color-shadow-dark);;
+}

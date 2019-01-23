@@ -5,9 +5,9 @@
     font-family: var(--font-family-header);
     overflow: hidden;
     border-bottom: 1px solid;
-    border-bottom-color: var(--color-scheme-main);
+    border-bottom-color: var(--color-shadow-main);
     border-top: 1px solid;
-    border-top-color: var(--color-scheme-light);
+    border-top-color: var(--color-shadow-light);
     z-index: 2;
 }
 
@@ -45,6 +45,14 @@
 .main-nav__item a {
     text-decoration: none;
     color: var(--color-scheme-main);
+}
+
+.main-nav__item a:hover {
+    color: var(--color-scheme-light);
+}
+
+.main-nav__item a:active {
+    color: var(--color-scheme-accent);
 }
 
 .sticky {
