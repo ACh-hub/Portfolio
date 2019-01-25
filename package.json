@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/ACh-hub/Portfolio/issues"
   },
-  "homepage": "https://github.com/ACh-hub/Portfolio#readme"
+  "homepage": "https://github.com/ACh-hub/Portfolio#readme",
+  "dependencies": {
+    "normalize.css": "7.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
 }

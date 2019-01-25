@@ -1,0 +1,6 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One");
+body {
+  background-color: #ECE8D9;
+  font-family: "Cantarell", sans-serif;
+  color: #393E46; }
