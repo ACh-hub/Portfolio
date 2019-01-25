@@ -1,0 +1,65 @@
+.section-mouse{
+    @include horizontal-middle();
+    top: 93%;
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: $color-scheme-dark;
+}
+
+.mouse::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $color-scheme-dark;
+    opacity: 1;
+    animation: mouse 1.5s infinite;
+}
+
+.mouse span {
+    @include horizontal-middle();
+    top: 140%;
+    text-transform: uppercase;
+}
+
+.mouse:hover {
+    border-color: $color-scheme-light;
+}
+
+.mouse:hover::before{
+    background: $color-scheme-accent;
+}
+
+.mouse:hover > span {
+    color: $color-scheme-light;
+    animation: scroll 1.5s;
+}
+
+@keyframes mouse {
+    from{
+        opacity: 1;
+        top: 5px;
+    }
+    to{
+        opacity: 0;
+        top:30px;
+    }
+}
+
+@keyframes scroll {
+    from{
+        color: $color-scheme-accent;
+    }
+    to{
+        color: $color-scheme-light;
+    }
+}
