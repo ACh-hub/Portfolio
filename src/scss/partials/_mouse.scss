@@ -1,0 +1,68 @@
+.mouse{
+    @include horizontal-middle();
+    top: 90%;
+    
+    
+    &__icon {
+        width: 20px;
+        height: 35px;
+        border-radius: 10px;
+        border: 2px solid;
+        border-color: $color-scheme-dark;
+        
+        
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $color-scheme-dark;
+            opacity: 1;
+            animation: mouse 1.5s infinite;
+        }
+        
+        &:hover {
+            border-color: $color-scheme-light;
+        }
+        
+        &:hover::before{
+            background: $color-scheme-accent;
+        }
+        
+        &:hover > span {
+            color: $color-scheme-light;
+            animation: text 1.5s;
+        }
+    }
+    
+    &__text {
+        @include horizontal-middle();
+        top: 140%;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+}
+
+@keyframes mouse {
+    from{
+        opacity: 1;
+        top: 5px;
+    }
+    to{
+        opacity: 0;
+        top:30px;
+    }
+}
+
+@keyframes text {
+    from{
+        color: $color-scheme-accent;
+    }
+    to{
+        color: $color-scheme-light;
+    }
+}

@@ -1,0 +1,5 @@
+.about{
+    @include section-styling();
+    height: 100vh;
+    background-color: $color-scheme-bg;
+}
