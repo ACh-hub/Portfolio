@@ -17,36 +17,34 @@
     </head>
 
 <body>
-    <div class="hero">
+    <div class="hero" id="top">
         <h1>Hero section cinegraph? animation? gradients in the background? + cta</h1>
-        <a class="button" href="#">Meet me</a>
-        <div class="section-mouse">
-            <div class="mouse">
-                <span>Scroll</span>
+        <a class="btn btn--yellow btn--big" href="#">Meet me</a>
+        <div class="mouse">
+            <div class="mouse__icon">
+                <span class="mouse__text">Scroll</span>
             </div>
         </div>
     </div>
 
-    <div class="main-header">
-        <div>
-            <a class="main-header__logo navlink" href="#section-hero">logo</a>
-        </div>
-        <div class="main-nav">
-            <ul class="main-nav__items">
-                <li class="main-nav__item"><a class="navlink" href="#section-about">About</a></li>
-                <li class="main-nav__item"><a class="navlink" href="#section-portfolio">Portfolio</a></li>
-                <li class="main-nav__item"><a class="navlink" href="#section-contact">Contact</a></li>
+    <div class="main-nav">
+            <ul class="main-nav__items main-nav__items--left">
+                <li class="main-nav__item main-nav__item--logo"><a class ="main-nav__link" href="#top">Logo</a></li>
             </ul>
-        </div>
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a class ="main-nav__link" href="#about">About</a></li>
+                <li class="main-nav__item"><a class ="main-nav__link" href="#portfolio">Portfolio</a></li>
+                <li class="main-nav__item"><a class ="main-nav__link" href="#contact">Contact</a></li>
+            </ul>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <h1>About section</h1>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h1>Portfolio section</h1>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1>Contact section</h1>
     </div>
 
@@ -55,7 +53,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
 
-    <script src="./js/scroll.js"></script>
+    <script src="./js/sticky.js"></script>
 
 </body>
 

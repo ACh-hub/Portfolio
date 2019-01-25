@@ -1,0 +1,59 @@
+.main-nav {
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
+    vertical-align: middle;
+    background-color: $color-scheme-dark;
+    padding: 0.5rem 0rem;
+    font-family: $font-family-header;
+    overflow: hidden;
+    border-bottom: 0.0625rem solid;
+    border-bottom-color: $color-shadow-main;
+    border-top: 0.0625rem solid;
+    border-top-color: $color-shadow-light;
+    z-index: 2;
+    
+    
+    &__items {
+        margin: 0;
+        padding: 0;
+        float:right;
+        list-style: none;
+        
+        &--left {
+            float: left;
+        }
+    }
+    
+    &__item {
+        display: inline-block;
+        margin: 0 16px;
+        
+        &--logo {
+            font-weight: 700;
+        }
+    }
+    
+    .main-nav__link {
+        text-decoration: none;
+        color: $color-scheme-main;
+        
+        
+        &:hover {
+            color: $color-scheme-light;
+        }
+        
+        &:active {
+            color: $color-scheme-accent;
+        }
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-top: none;
+        
+    }
+        
+}

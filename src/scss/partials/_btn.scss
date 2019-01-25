@@ -1,14 +1,21 @@
-.button {
-    height: 45px;
-    width: 120px;
-    background-color: $color-scheme-accent;
-    color: $color-scheme-dark;
-    font-weight: 700;
+.btn {
+
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius:10px;
-    box-shadow: 0 1px 1px 1px inset $color-shadow-bg, 0 1px 1px 1px $color-shadow-dark;
     @include horizontal-middle();
-    top: 50%;
+
+    &--yellow{
+        background-color: $color-scheme-accent;
+        color: $color-scheme-dark;
+        box-shadow: 0 1px 1px 1px inset $color-shadow-bg, 0 1px 1px 1px $color-shadow-dark;
+    }
+
+    &--big{
+        height: 45px;
+        width: 120px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius:10px;
+    }
+
 }
