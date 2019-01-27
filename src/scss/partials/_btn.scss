@@ -2,6 +2,7 @@
 
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     @include horizontal-middle();
 
     &--yellow{
@@ -11,8 +12,8 @@
     }
 
     &--big{
-        height: 45px;
-        width: 120px;
+        height: 25px;
+        width: 140px;
         font-weight: 700;
         padding: 10px 20px;
         border-radius:10px;
