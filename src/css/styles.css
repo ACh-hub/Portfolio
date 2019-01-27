@@ -398,7 +398,14 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  top: 90%; }
+  top: 90%;
+  visibility: hidden; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .mouse {
+      visibility: visible; } }
+  @media (min-width: 1024px) {
+    .mouse {
+      visibility: visible; } }
   .mouse__icon {
     width: 20px;
     height: 35px;
