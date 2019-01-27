@@ -47,13 +47,12 @@
             color: $color-scheme-accent;
         }
     }
-    
-    .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        border-top: none;
         
-    }
-        
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-top: none; 
 }

@@ -497,11 +497,12 @@ body {
       color: #B7C7E0; }
     .main-nav .main-nav__link:active {
       color: #F8B500; }
-  .main-nav .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border-top: none; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-top: none; }
 
 .about {
   width: 100%;
