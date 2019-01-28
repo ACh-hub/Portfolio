@@ -13,5 +13,5 @@ gulp.task('sass', ()=>{
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(gulp.dest('./src/css/'));
+    .pipe(gulp.dest('./src/temp/css/'));
 });
