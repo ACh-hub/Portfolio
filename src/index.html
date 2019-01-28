@@ -45,7 +45,18 @@
         <h1>Portfolio section</h1>
     </div>
     <div class="contact" id="contact">
-        <h1>Contact section</h1>
+        <form action="#">
+            <fieldset>
+                <legend>Personal information:</legend>
+                <label for="name">Your name</label>
+                <input type="text" name="name" value="" required>
+                <label for="email">email</label>
+                <input type="email" name="email" value="" required>
+                <label for="message">message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
     </div>
     
     
@@ -57,4 +68,4 @@
         <script src="./js/sticky.js"></script>
         
     </body>
-</html>
+    </html>
