@@ -3,7 +3,6 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    @include horizontal-middle();
 
     &--yellow{
         background-color: $color-scheme-accent;
