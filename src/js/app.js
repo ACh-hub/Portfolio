@@ -1,10 +1,6 @@
-import Person from './modules/Person';
+import $ from "jquery";
+import MobileNavBar from "./modules/MobileNavBar";
 
 "use strict";
 
-console.log("in app.js");
-
-
-
-var john = new Person("John Doe");
-john.greet();
+const navbar = new MobileNavBar();

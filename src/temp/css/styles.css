@@ -468,45 +468,51 @@ body {
   to {
     color: #B7C7E0; } }
 
-.main-nav {
-  display: inline-block;
-  text-transform: uppercase;
+.main-header {
+  position: absolute;
   width: 100%;
-  vertical-align: middle;
-  background-color: #393E46;
-  padding: 0.5rem 0rem;
-  font-family: "Fjalla One", sans-serif;
-  overflow: hidden;
-  border-bottom: 0.0625rem solid;
-  border-bottom-color: rgba(0, 173, 181, 0.3);
-  border-top: 0.0625rem solid;
-  border-top-color: rgba(183, 199, 224, 0.3);
-  z-index: 2; }
-  .main-nav__items {
-    margin: 0;
-    padding: 0;
-    float: right;
-    list-style: none; }
-    .main-nav__items--left {
-      float: left; }
-  .main-nav__item {
-    display: inline-block;
-    margin: 0 16px; }
-    .main-nav__item--logo {
-      font-weight: 700; }
-  .main-nav .main-nav__link {
-    text-decoration: none;
-    color: #00ADB5; }
-    .main-nav .main-nav__link:hover {
-      color: #B7C7E0; }
-    .main-nav .main-nav__link:active {
-      color: #F8B500; }
+  background-color: #393E46; }
+  .main-header__logo {
+    color: #F8B500 !important;
+    display: block !important; }
+  .main-header__menu-icon {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .main-header__menu-icon {
+        display: none; } }
+    @media (min-width: 1024px) {
+      .main-header__menu-icon {
+        display: none; } }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border-top: none; }
+.primary-nav {
+  float: left; }
+  .primary-nav--pull-right {
+    float: right; }
+  .primary-nav ul {
+    margin: 0;
+    padding: 0; }
+  .primary-nav li {
+    list-style: none;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .primary-nav a {
+    color: #00ADB5;
+    text-decoration: none;
+    display: none;
+    padding: 20px; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .primary-nav a {
+        display: block; } }
+    @media (min-width: 1024px) {
+      .primary-nav a {
+        display: block; } }
 
 .about {
   width: 100%;
