@@ -18,3 +18,9 @@ gulp.task('sass', ()=>{
     })
     .pipe(gulp.dest('./src/temp/css/'));
 });
+
+gulp.task('injectCSS',gulp.series('sass'),()=>{
+    return gulp.src('./src/temp/css/styles.css')
+    .pipe(browserSync.reload({ stream: true}));
+
+});
