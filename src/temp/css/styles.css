@@ -377,11 +377,7 @@ body {
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  text-align: center; }
   .btn--yellow {
     background-color: #F8B500;
     color: #393E46;
@@ -529,9 +525,62 @@ body {
   background-color: #B7C7E0; }
 
 .contact {
-  width: 100%;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
+  background-color: #00ADB5;
   height: 100vh;
-  background-color: #00ADB5; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .contact__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .contact__title {
+    margin: 0 auto; }
+  .contact__subtitle {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto; }
+  .contact__form {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90%;
+    padding: 1vw;
+    margin: 0 auto; }
+  .contact__input {
+    width: 100%;
+    margin: 0.5vw auto;
+    padding: 0;
+    border: 0;
+    border-bottom: 0.5px solid #393E46;
+    background-color: transparent; }
+  .contact__message {
+    width: 100%;
+    padding: 0;
+    margin: 0.5vw auto;
+    overflow: auto;
+    resize: none;
+    border: 0;
+    border-bottom: 0.5px solid #393E46;
+    background-color: transparent; }
+  .contact__submit {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    margin: 0.5vw auto;
+    border: 0;
+    border-radius: 10px;
+    padding-top: 5px; }
