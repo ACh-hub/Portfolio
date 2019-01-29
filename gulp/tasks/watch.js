@@ -16,7 +16,7 @@ gulp.task('watch', ()=>{
     
     gulp.watch('./src/index.html', gulp.series(reload));
     
-    gulp.watch('./src/js/**/*.js', gulp.series('scripts'));
+    gulp.watch('./src/js/**/*.js', gulp.series('scripts', reload));
 
     gulp.watch('./src/scss/**/*.scss', gulp.series('injectCSS', reload));
 
