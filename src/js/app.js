@@ -1,10 +1,7 @@
-import Person from './modules/Person';
+import MobileNavBar from "./modules/MobileNavBar";
+import StickyNavBar from "./modules/StickyNavBar";
 
 "use strict";
 
-console.log("in app.js");
-
-
-
-var john = new Person("John Doe");
-john.greet();
+const mobileNavBar = new MobileNavBar();
+const stickyNavBar = new StickyNavBar();
