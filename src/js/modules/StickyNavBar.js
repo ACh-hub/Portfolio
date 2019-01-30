@@ -4,7 +4,7 @@ import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints
 export default class StickyNavBar{
     constructor(){
         this.navBar = $(".main-nav");
-        this.stopPoint = $("#stop")[0];
+        this.stopPoint = $("#about")[0];
         this.pageSections = $(".page-section");
         this.navLinks = $(".main-nav__link");
         this.createNavBarWaypoint();

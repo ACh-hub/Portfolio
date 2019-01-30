@@ -48,8 +48,8 @@
   }
   
   &.responsive {
-    position: relative;
-    
+    position: fixed;
+    top: 0;
   }
   
   &__link.responsive{

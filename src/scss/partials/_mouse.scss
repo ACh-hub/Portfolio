@@ -1,15 +1,6 @@
 .mouse{
     @include horizontal-middle();
     top: 90%;
-    visibility: hidden;
-
-    @include tablet {
-        visibility: visible;
-      }
-      
-    @include desktop {
-          visibility: visible;
-      }
     
     &__icon {
         width: 20px;
