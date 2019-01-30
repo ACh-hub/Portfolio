@@ -2,7 +2,7 @@ import $ from "jquery";
 
 export default class MobileNavBar {
     constructor(){
-        this.menuHamburger = $(".menu-toggle");
+        this.menuHamburger = $(".main-nav .main-nav__link");
         this.events();
     }
 
@@ -11,7 +11,6 @@ export default class MobileNavBar {
     }
 
     toggleHamburger(){
-        $('ul').toggleClass('opening');
-        $(this).toggleClass('open');
+        this.menuHamburger.toggleClass("responsive");
     }
 }
