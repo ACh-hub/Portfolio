@@ -480,9 +480,10 @@ body {
     display: block;
     color: #00ADB5;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 17px; }
+    font-size: 1rem; }
     .main-nav__link:hover {
       background-color: #B7C7E0;
       color: #393E46; }
@@ -516,6 +517,11 @@ body {
       position: absolute;
       right: 0;
       top: 0; }
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0; }
 
 .about {
   width: 100%;
