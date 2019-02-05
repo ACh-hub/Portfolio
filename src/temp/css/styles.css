@@ -365,6 +365,7 @@ html {
 body {
   background-color: #ECE8D9;
   font-family: "Cantarell", sans-serif;
+  font-size: 1em;
   color: #393E46; }
 
 .wrapper {
@@ -481,16 +482,19 @@ body {
     .main-nav__link:hover {
       background-color: #B7C7E0;
       color: #393E46; }
+    @media (min-width: 64em) and (max-width: 85.3125em) {
+      .main-nav__link {
+        font-size: 1rem; } }
   .main-nav .active {
     background-color: #F8B500;
     color: #393E46; }
   .main-nav .icon {
     float: right;
     display: block; }
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: 48em) and (max-width: 63.9375em) {
       .main-nav .icon {
         display: none; } }
-    @media (min-width: 1024px) {
+    @media (min-width: 64em) and (max-width: 85.3125em) {
       .main-nav .icon {
         display: none; } }
 
