@@ -4,10 +4,15 @@ import "regenerator-runtime/runtime";
 import "../scss/styles.scss";
 
 import Sticky from "../js/modules/sticky";
+import VanillaScrollspy from 'vanillajs-scrollspy';
+
+
 
 "use strict";
 
 const stickyHeader = new Sticky();
+const scrollspy = new VanillaScrollspy(stickyHeader.element);
+scrollspy.init();
 
 window.onscroll = function (e) {
     let offset = window.pageYOffset;
