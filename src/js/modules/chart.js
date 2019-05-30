@@ -5,6 +5,8 @@ export default class Chart {
         this.chartContainer = chartContainer;
         this.svgId = svgId;
     }
+
+
     init() {
 
         this.height = this.chartContainer.offsetHeight;
@@ -23,6 +25,16 @@ export default class Chart {
                 },
                 {
                     "skill": "Sass",
+                    "class": "dev",
+                    "level": 4
+                },
+                {
+                    "skill": "Bootstrap",
+                    "class": "dev",
+                    "level": 1
+                },
+                {
+                    "skill": "Git",
                     "class": "dev",
                     "level": 4
                 },
@@ -47,9 +59,29 @@ export default class Chart {
                     "level": 3
                 },
                 {
+                    "skill": "C++",
+                    "class": "dev",
+                    "level": 3
+                },
+                {
+                    "skill": "Java",
+                    "class": "dev",
+                    "level": 1
+                },
+                {
                     "skill": "Photoshop",
                     "class": "des",
                     "level": 3
+                },
+                {
+                    "skill": "RWD",
+                    "class": "des",
+                    "level": 1
+                },
+                {
+                    "skill": "Figma",
+                    "class": "des",
+                    "level": 1
                 },
                 {
                     "skill": "Polish",
@@ -61,15 +93,46 @@ export default class Chart {
                     "class": "lang",
                     "level": 4
                 },
+                {
+                    "skill": "French",
+                    "class": "lang",
+                    "level": 1
+                },
+                {
+                    "skill": "Russian",
+                    "class": "lang",
+                    "level": 2
+                },
             ]
         };
 
-        // chart area
+        // chart svg
         const svg = d3.select(this.chartContainer)
             .append("svg")
             .attr('id', this.svgId)
             .attr('width', this.width)
-            .attr('height', this.height);
+            .attr('height', this.height)
+            .call(responsivefy);
+
+            function responsivefy(svg) {
+                var container = d3.select(svg.node().parentNode),
+                    width = parseInt(svg.style("width")),
+                    height = parseInt(svg.style("height")),
+                    aspect = width / height;
+
+                svg.attr("viewBox", "0 0 " + width + " " + height)
+                    .attr("perserveAspectRatio", "xMinYMid")
+                    .call(resize);
+            
+                d3.select(window).on("resize." + container.attr("id"), resize);
+            
+                function resize() {
+                    var targetWidth = parseInt(container.style("width"));
+                    svg.attr("width", targetWidth);
+                    svg.attr("height", Math.round(targetWidth / aspect));
+                }
+            }
+
 
         // definitions for patterns
         const defs = svg.append("defs");
@@ -127,9 +190,15 @@ export default class Chart {
     }
 
     initSimulation() {
+  // Features of the forces applied to the nodes:
+
+
         let result = d3.forceSimulation()
-            .force('charge', d3.forceManyBody().strength(-70))
-            .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+            .force('center', d3.forceCenter(this.width / 2, this.height/1.8))
+            .force("charge", d3.forceManyBody().strength(50))
+            .force('collision', d3.forceCollide().radius(d=>{
+                return d.level*16;
+            }))
         return result;
 
     }
@@ -142,7 +211,6 @@ export default class Chart {
         console.log(`node clicked`);
     }
 
-
     update(t, simulation) {
         const nodes = t.chartData.nodes;
 
@@ -153,7 +221,7 @@ export default class Chart {
 
         const circles = graphNodeCircles.append("circle")
             .attr("r", d => {
-                return d.level * 20;
+                return d.level * 15;
             })
             .style("fill", d => {
                 switch (d.class) {
@@ -184,10 +252,10 @@ export default class Chart {
         function handleTicked() {
             graphNodeCircles.
             attr("transform", d => {
-                return 'translate(' + [d.x, d.y] + ')';
+                return `translate(${[d.x, d.y]})`;
             })
         }
 
-
     }
 }
+

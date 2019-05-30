@@ -1,19 +1,31 @@
 .about{
-    @include section-styling();
     height: 100vh;
     background-color: $color-scheme-bg;
     display:flex;
+    flex-direction: row;
+
+    @include phone {
+        flex-direction: column;
+    }
 
     .chart-container {
         width: 70vw;
-        height: 100vh;
+        height:100vh;
         margin: auto;
+        display: flex;
+        @include phone {
+            width: 100vw;
+        }
     }
 
     .about-me-container{
         width: 30vw;
-        height: 100vh;
+        height:100vh;
         margin: auto;
         background-color: blueviolet;
+        display: flex;
+        @include phone {
+            width: 100vw;
+        }
     }
 }
