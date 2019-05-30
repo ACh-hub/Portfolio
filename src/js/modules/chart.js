@@ -22,36 +22,80 @@ export default class Chart {
                     "level": 4
                 },
                 {
+                    "skill": "Sass",
+                    "class": "dev",
+                    "level": 4
+                },
+                {
                     "skill": "HTML5",
                     "class": "dev",
                     "level": 5
+                },
+                {
+                    "skill": "Webpack",
+                    "class": "dev",
+                    "level": 1
+                },
+                {
+                    "skill": "Gulp",
+                    "class": "dev",
+                    "level": 1
                 },
                 {
                     "skill": "d3.js",
                     "class": "dev",
                     "level": 3
                 },
+                {
+                    "skill": "Photoshop",
+                    "class": "des",
+                    "level": 3
+                },
+                {
+                    "skill": "Polish",
+                    "class": "lang",
+                    "level": 5
+                },
+                {
+                    "skill": "English",
+                    "class": "lang",
+                    "level": 4
+                },
             ]
         };
 
         // chart area
-        let svg = d3.select(this.chartContainer)
+        const svg = d3.select(this.chartContainer)
             .append("svg")
             .attr('id', this.svgId)
             .attr('width', this.width)
             .attr('height', this.height);
 
+        // definitions for patterns
+        const defs = svg.append("defs");
+        const pattern = defs.append("pattern")
+        .attr("id","stripes-1")
+        .attr("patternUnits","userSpaceOnUse")
+        .attr("width",10)
+        .attr("height",10);
+        const image = pattern.append("image")
+        .attr("xlink:href","data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2JiZDgxNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPHJlY3QgeT0iLTUwIiB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPC9nPgo8L3N2Zz4=")
+        .attr("x",0)
+        .attr("y",0)
+        .attr("width",10)
+        .attr("height",10);
+
         //background area
-        let background = this.initBackground(this, svg);
+        const background = this.initBackground(this, svg);
 
         // Holds child components (nodes, links), i.e. all but the background
-        let svgGroup = svg
+        const svgGroup = svg
             .append('svg:g')
             .attr("id", "svgGroup");
         this.svgGroup = svgGroup;
 
         // Holds nodes
-        let graphNodesGroup =
+        const graphNodesGroup =
             svgGroup
             .append("g")
             .attr("id", `nodes_${this.svgId}`)
@@ -59,7 +103,7 @@ export default class Chart {
         this.graphNodesGroup = graphNodesGroup;
 
         // Simulation
-        let simulation = this.initSimulation();
+        const simulation = this.initSimulation();
         this.simulation = simulation;
 
         // update();
@@ -100,24 +144,37 @@ export default class Chart {
 
 
     update(t, simulation) {
-        let nodes = t.chartData.nodes;
+        const nodes = t.chartData.nodes;
 
         // nodes
-        let graphNodeCircles = t.graphNodesGroup.selectAll("circle")
+        const graphNodeCircles = t.graphNodesGroup.selectAll("circle")
             .data(nodes)
             .enter().append("g");
 
-        let circles = graphNodeCircles.append("circle")
-            .attr("r", d=> {return d.level * 15;})
-            .style("fill",d=>{
-                switch(d.class){
+        const circles = graphNodeCircles.append("circle")
+            .attr("r", d => {
+                return d.level * 20;
+            })
+            .style("fill", d => {
+                switch (d.class) {
                     case "dev":
-                    return "#555584";
+                        return "url(#stripes-1) #222";
+
+                    case "des":
+                        return "#223567";
+
+                    case "lang":
+                        return "#547902";
                 }
             });
 
-        let text = graphNodeCircles.append("text")
-            .text(d=>{return d.skill;});
+        const text = graphNodeCircles.append("text")
+            .text(d => {
+                return d.skill;
+            })
+            .attr("x", 0)
+            .attr("y", 4)
+            .attr("text-anchor", "middle");
 
         //apply simulation
         simulation
