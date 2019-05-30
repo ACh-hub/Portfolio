@@ -2,4 +2,18 @@
     @include section-styling();
     height: 100vh;
     background-color: $color-scheme-bg;
+    display:flex;
+
+    .chart-container {
+        width: 70vw;
+        height: 100vh;
+        margin: auto;
+    }
+
+    .about-me-container{
+        width: 30vw;
+        height: 100vh;
+        margin: auto;
+        background-color: blueviolet;
+    }
 }
