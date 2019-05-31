@@ -4,6 +4,10 @@ export default class Chart {
     constructor(chartContainer, svgId) {
         this.chartContainer = chartContainer;
         this.svgId = svgId;
+
+        /////// Chart magic numbers /////////
+        this.chargeStrength = 50;
+        this.collisionStrength = 16;
     }
 
 
@@ -49,7 +53,17 @@ export default class Chart {
                     "level": 1
                 },
                 {
+                    "skill": "Babel",
+                    "class": "dev",
+                    "level": 1
+                },
+                {
                     "skill": "Gulp",
+                    "class": "dev",
+                    "level": 1
+                },
+                {
+                    "skill": "REST",
                     "class": "dev",
                     "level": 1
                 },
@@ -178,9 +192,9 @@ export default class Chart {
 
         let result = d3.forceSimulation()
             .force('center', d3.forceCenter(this.width / 2, this.height/1.8))
-            .force("charge", d3.forceManyBody().strength(50))
+            .force("charge", d3.forceManyBody().strength(this.chargeStrength))
             .force('collision', d3.forceCollide().radius(d=>{
-                return d.level*16;
+                return d.level*this.collisionStrength;
             }))
         return result;
 
@@ -200,7 +214,7 @@ export default class Chart {
 
         const circles = graphNodeCircles.append("circle")
             .attr("r", d => {
-                return d.level * 15;
+                return d.level * this.collisionStrength - d.level;
             })
             .style("fill", d => {
                 switch (d.class) {
@@ -223,14 +237,14 @@ export default class Chart {
             .attr("y", 4)
             .attr("text-anchor", "middle")
             .style("font-size",d=>{
-                if (d.level==1){
-                    return "0.6em";
-                }
-                else if (d.level==2){
-                    return "0.7em";
-                }
-                else {
-                    return "0.8em";
+                switch(d.level){
+                    case 1:                 
+                        return "0.6em";
+                    case 2:
+                        return "0.7em";
+                    default:
+                        return "0.8em";
+                
                 }
             });
 
