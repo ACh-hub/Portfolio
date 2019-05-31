@@ -148,8 +148,6 @@ export default class Chart {
         .attr("width",10)
         .attr("height",10);
 
-        //background area
-        const background = this.initBackground(this, svg);
 
         // Holds child components (nodes, links), i.e. all but the background
         const svgGroup = svg
@@ -174,21 +172,6 @@ export default class Chart {
 
     }
 
-    initBackground(t, svg) {
-        let result = svg
-            .append("rect")
-            .attr("id", "backgroundId")
-            .attr("fill", "#F2F7F0")
-            .attr("class", "view")
-            .attr("x", 0.5)
-            .attr("y", 0.5)
-            .attr("width", t.width - 1)
-            .attr("height", t.height - 1)
-            .on("click", () => t.handleBackgroundClicked());
-
-        return result;
-    }
-
     initSimulation() {
   // Features of the forces applied to the nodes:
 
@@ -201,10 +184,6 @@ export default class Chart {
             }))
         return result;
 
-    }
-
-    handleBackgroundClicked() {
-        console.log(`background clicked`);
     }
 
     handleNodeClicked(d) {
@@ -242,7 +221,18 @@ export default class Chart {
             })
             .attr("x", 0)
             .attr("y", 4)
-            .attr("text-anchor", "middle");
+            .attr("text-anchor", "middle")
+            .style("font-size",d=>{
+                if (d.level==1){
+                    return "0.6em";
+                }
+                else if (d.level==2){
+                    return "0.7em";
+                }
+                else {
+                    return "0.8em";
+                }
+            });
 
         //apply simulation
         simulation
