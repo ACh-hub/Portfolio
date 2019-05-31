@@ -200,10 +200,6 @@ export default class Chart {
 
     }
 
-    handleNodeClicked(d) {
-        console.log(`node clicked`);
-    }
-
     update(t, simulation) {
         const nodes = t.chartData.nodes;
 
