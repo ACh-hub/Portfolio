@@ -21,9 +21,9 @@
     .about-me-container{
         width: 30vw;
         height:100vh;
-        margin: auto;
-        background-color: blueviolet;
+        margin: 0 auto;
         display: flex;
+        flex-direction: column;
         @include phone {
             width: 100vw;
         }
