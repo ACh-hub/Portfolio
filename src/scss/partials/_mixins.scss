@@ -4,6 +4,14 @@ $large-desktop-width: 85.375em;       //1366px
 $xlarge-desktop-width: 120em;         //1920px
 $xxlarge-desktop-width: 160em;        //2560px
 
+
+@mixin phone {
+  @media(max-width: #{$tablet-width - 0.0625em}) {
+    @content;
+  }
+}
+
+
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 0.0625em}) {
     @content;
@@ -34,12 +42,6 @@ $xxlarge-desktop-width: 160em;        //2560px
   }
 }
 
-@mixin section-styling(){
-    width: 100%;
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-}
 
 @mixin horizontal-middle(){
     position: absolute;

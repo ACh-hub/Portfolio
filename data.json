@@ -1,0 +1,103 @@
+{
+    "nodes": [{
+            "skill": "Javascript (ES6)",
+            "class": "dev",
+            "level": 4
+        },
+        {
+            "skill": "CSS3",
+            "class": "dev",
+            "level": 4
+        },
+        {
+            "skill": "Sass",
+            "class": "dev",
+            "level": 4
+        },
+        {
+            "skill": "Bootstrap",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "Git",
+            "class": "dev",
+            "level": 4
+        },
+        {
+            "skill": "HTML5",
+            "class": "dev",
+            "level": 5
+        },
+        {
+            "skill": "Webpack",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "Babel",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "Gulp",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "REST",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "d3.js",
+            "class": "dev",
+            "level": 3
+        },
+        {
+            "skill": "C++",
+            "class": "dev",
+            "level": 3
+        },
+        {
+            "skill": "Java",
+            "class": "dev",
+            "level": 1
+        },
+        {
+            "skill": "Photoshop",
+            "class": "des",
+            "level": 3
+        },
+        {
+            "skill": "RWD",
+            "class": "des",
+            "level": 1
+        },
+        {
+            "skill": "Figma",
+            "class": "des",
+            "level": 1
+        },
+        {
+            "skill": "Polish",
+            "class": "lang",
+            "level": 5
+        },
+        {
+            "skill": "English",
+            "class": "lang",
+            "level": 4
+        },
+        {
+            "skill": "French",
+            "class": "lang",
+            "level": 1
+        },
+        {
+            "skill": "Russian",
+            "class": "lang",
+            "level": 2
+        }
+    ]
+}
