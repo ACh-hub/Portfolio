@@ -15,8 +15,8 @@
     font-size: 1rem;
     
     &:hover{
-      background-color: $color-scheme-light;
-      color: $color-scheme-dark;
+      color: $color-scheme-light;
+      animation: text 1.5s;
     }
 
     @include desktop{

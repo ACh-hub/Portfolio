@@ -46,23 +46,3 @@
     }
 }
 
-@keyframes mouse {
-    from{
-        opacity: 1;
-        top: 5px;
-    }
-    to{
-        opacity: 0;
-        top:30px;
-    }
-}
-
-@keyframes text {
-    from{
-        color: $color-scheme-accent;
-    }
-    to{
-        color: $color-scheme-light;
-    }
-}
-
