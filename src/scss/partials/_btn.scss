@@ -5,10 +5,15 @@
     text-align: center;
     margin: 0 auto;
 
+    &:hover{
+        animation: button 1.5s;
+    }
+
     &--yellow{
         background-color: $color-scheme-accent;
         color: $color-scheme-dark;
         box-shadow: 0 1px 1px 1px inset $color-shadow-bg, 0 1px 1px 1px $color-shadow-dark;
+
     }
 
     &--big{

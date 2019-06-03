@@ -17,3 +17,14 @@
         top:30px;
     }
 }
+
+@keyframes button {
+    from{
+        color:$color-scheme-main;
+
+    }
+    to{
+        color:$color-scheme-dark;
+
+    }
+}
