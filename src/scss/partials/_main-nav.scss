@@ -27,6 +27,10 @@
   .active {
     background-color: $color-scheme-accent;
     color: $color-scheme-dark;
+
+    &:hover{
+      animation: activetext 1.5s;
+    }
   }
   
   .icon {

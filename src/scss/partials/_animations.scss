@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes activetext {
+    from{
+        color: $color-scheme-dark;
+    }
+    to{
+        color: $color-scheme-main;
+    }
+}
+
 @keyframes mouse {
     from{
         opacity: 1;
