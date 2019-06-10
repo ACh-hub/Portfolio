@@ -13,13 +13,28 @@ module.exports = {
 	},
 	target: 'node',
 	module: {
-		rules: [{
+		rules: [
+
+		// Babel	
+			{
 			test: /\.js$/,
 			exclude: /node_modules/,
 			use: {
 				loader: 'babel-loader',
 			}
 		},
+		// Eslint
+		{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'eslint-loader',
+				options: {
+					fix: true,
+				  }, 
+			},
+		},
+		// Css
 		{
 			test: /\.scss$/,
 			use: [ 'style-loader', 
