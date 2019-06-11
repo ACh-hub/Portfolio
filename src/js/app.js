@@ -6,6 +6,7 @@ import '../scss/styles.scss'
 import Sticky from '../js/modules/sticky'
 import VanillaScrollspy from 'vanillajs-scrollspy'
 import Chart from '../js/modules/chart'
+import ContactForm from './modules/contactform'
 
 /// /////// Hero art ////////
 
@@ -32,3 +33,6 @@ window.onscroll = function (e) {
     stickyHeader.stuck = false
   }
 }
+
+/// /////// Contact Form ////////
+const contactform = new ContactForm()
