@@ -8,7 +8,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const I18nPlugin = require('i18n-webpack-plugin');
 
 const languages = {
-	en: null,
+	en: require ("./languages/en.json"),
 	pl: require("./languages/pl.json")
 };
 
