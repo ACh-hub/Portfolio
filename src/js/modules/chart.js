@@ -65,7 +65,7 @@ export default class Chart {
 
   async init () {
     // retrieve data for nodes
-    const data = await d3.json('../data.json')
+    const data = await d3.json('/data/data.json')
     this.chartData = data
 
     // create groups and bind data
